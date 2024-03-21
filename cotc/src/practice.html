@@ -1,0 +1,67 @@
+<head></head>
+<body>
+<p>hi</p>
+<script>
+
+function myfunction(a,b,c){
+return a + b + c;
+}
+
+
+function shawn (...args){
+var dude = 0;
+for (i in args)
+dude++;
+return dude;
+
+}
+
+class shawn2 (){
+
+var length = 0;
+var head = null;
+
+var Node = function (newuser){
+	this.element = newuser;
+	this.next = null;
+	
+}
+
+this.size = function(){
+ return length;
+}
+
+this.head = function(){
+ return head;
+}
+
+
+this.add = function(newuser){
+  var info = new Node(newuser);
+  if(head === null){
+  head = Node;
+  }
+  else{
+	currentNode = head;
+	
+	while(currentNode = currentNode.next){
+	currentNode = currentNode.next;
+	}
+	
+	currentNode.next = info;
+  }
+  
+  length++;
+}
+
+
+
+
+
+}
+
+
+//console.log(shawn(9,5,8,5));
+</script>
+
+</body>
