@@ -1,6 +1,7 @@
 import imageone from './img/pic10.png'
 import imagetwo from './img/woodlawn2.png'
 import imagethree from './img/woodlawntitle2.png'
+import audioone from "./img/hoveraudio.WAV"
 import { Link, useNavigate } from 'react-router-dom'
 
 import photo from './img/screen.png'
@@ -18,7 +19,7 @@ import './cotcstyle.css';
 
 function Store() {
 	
- 
+ const audio = new Audio(audioone);
  const woodlawnred = function (){
 	 var link2site = 'https://store.steampowered.com/app/2071920/Woodlawn__The_End_of_the_World/';
 	 window.location(link2site);
@@ -37,7 +38,7 @@ function Store() {
   return (
   <body className="site">
 <div className="bgmood">
-    <div className="div1"> <h1 className="bgtext">Children of the corn store</h1>
+    <div className="div1" onMouseOver ={ () => {audio.play()}}> <h1 className="bgtext">Children of the corn store</h1>
 	<img src={imagethree} className = "im1" />
 	<p className="bgtext">Woodlawn : The end of the World</p>
 	<p className="bgtext">price : $19.99</p>
@@ -55,9 +56,9 @@ function Store() {
 	
 	
 	
-	<div className="div1" > <h1 className="bgtext">Home</h1> </div>
+	<div className="div1" onMouseOver ={ () => {audio.play()}}> <h1 className="bgtext">Home</h1> </div>
 	<a href = 'https://store.steampowered.com/app/2071920/Woodlawn__The_End_of_the_World/'>
-	<div className="div1" onClick={navstore}> <h1 className="bgtext">View on steam</h1> </div></a>
+	<div className="div1" onMouseOver ={ () => {audio.play()}} onClick={navstore}> <h1 className="bgtext">View on steam</h1> </div></a>
 
 
 

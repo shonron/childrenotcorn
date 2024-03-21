@@ -1,6 +1,7 @@
 import imageone from './img/pic10.png'
 import imagetwo from './img/woodlawn2.png'
 import logo from './img/logo1.png'
+import audioone from "./img/hoveraudio.WAV"
 
 
 
@@ -16,7 +17,7 @@ import {Fade, Zoom, Slide} from 'react-slideshow-image';
 
 function About() {
 	
-	
+	const audio = new Audio(audioone);
 	let navigate = useNavigate();
 	
 	const home = function () {navigate('/');};
@@ -24,7 +25,7 @@ function About() {
 	return (
      <body className="site">
 	 <div className="bgmood">
-	 <div className="div1"> <h1 className="bgtext">About Children of the corn</h1> 
+	 <div className="div1" onMouseOver ={ () => {audio.play()}}> <h1 className="bgtext">About Children of the corn</h1> 
 	 
 	 <p className="bgtext">Children of the Corn LLC was founded on February 11, 2021 in Chicago, Illinois. 
 	 It created the “Woodlawn series” with the first installment ‘Woodlawn : The End of the World’ 
@@ -45,7 +46,7 @@ function About() {
 	 
 	
 	 
-	 <div className="div1" onClick={home}> <h1 className="bgtext">Home</h1> </div>
+	 <div className="div1" onMouseOver ={ () => {audio.play()}} onClick={home}> <h1 className="bgtext">Home</h1> </div>
 	 
 	 
 	 </div>
